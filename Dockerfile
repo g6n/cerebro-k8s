@@ -1,6 +1,6 @@
 FROM openjdk:8-jre
 
-USER ROOT
+#USER root
 
 ARG CEREBRO_VERSION=0.6.8
 RUN cd /opt/ \
@@ -10,7 +10,7 @@ RUN cd /opt/ \
     && mkdir cerebro-${CEREBRO_VERSION}/logs \
     && mv cerebro-${CEREBRO_VERSION} cerebro
 
-USER cerebro
+#USER cerebro
 
 WORKDIR /opt/cerebro
 EXPOSE 9000
